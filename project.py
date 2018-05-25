@@ -1,4 +1,5 @@
---------------------------------------------------------------------------
+# Projecting rasters into correct region based on Excel worksheet "Workflow"
+# This is for vector data, not the raster
 
 # Import arcpy module
 import arcpy
@@ -17,7 +18,7 @@ v_Name__proj_cm = "D:\\Work\\Noise\\dmti_proj\\2016\\TOR\\CanMap\\%Name%_proj_cm
 arcpy.IterateFeatureClasses_mb(shp_conv, "", "", "NOT_RECURSIVE")
 
 # Process: Project
-arcpy.Project_management(AboriginalBoundariesRegion_shp, v_Name__proj_cm, 
+arcpy.Project_management(AboriginalBoundariesRegion_shp, v_Name__proj_cm,
                          "PROJCS['NAD_1983_UTM_Zone_17N',
                          GEOGCS['GCS_North_American_1983',
                                 DATUM['D_North_American_1983',
@@ -30,12 +31,11 @@ arcpy.Project_management(AboriginalBoundariesRegion_shp, v_Name__proj_cm,
                                       PARAMETER['Central_Meridian',-81.0],
                                       PARAMETER['Scale_Factor',0.9996],
                                       PARAMETER['Latitude_Of_Origin',0.0],
-                                      UNIT['Meter',1.0]]", 
-                                      "WGS_1984_(ITRF00)_To_NAD_1983", 
+                                      UNIT['Meter',1.0]]",
+                                      "WGS_1984_(ITRF00)_To_NAD_1983",
                                       "GEOGCS['GCS_WGS_1984',
                                       DATUM['D_WGS_1984',
                                             SPHEROID['WGS_1984',6378137.0,298.257223563]],
                                             PRIMEM['Greenwich',0.0],
                                             UNIT['Degree',0.0174532925199433]]",
                                             "NO_PRESERVE_SHAPE", "", "NO_VERTICAL")
-

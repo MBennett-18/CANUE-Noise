@@ -1,3 +1,6 @@
+# Clip all layers to the specified bounds of each study site. This would be down for as many study sites
+
+
 
 # Import arcpy module
 import arcpy
@@ -18,4 +21,3 @@ arcpy.IterateFeatureClasses_mb(MTL, "", "", "RECURSIVE")
 
 # Process: Clip
 arcpy.Clip_analysis(FeatureClass, MON_bound_buff_shp, v_NAME__bnd_shp, "")
-

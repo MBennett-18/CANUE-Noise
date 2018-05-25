@@ -1,3 +1,4 @@
+# COnverting the provided ascii files from team into raster format (.tif) for analysis
 
 # Import arcpy module
 import arcpy
@@ -17,4 +18,3 @@ arcpy.IterateFiles_mb(unzip, "", "txt", "NOT_RECURSIVE")
 
 # Process: ASCII to Raster
 arcpy.ASCIIToRaster_conversion(File_txt, v_NAME__tif, "FLOAT")
-
