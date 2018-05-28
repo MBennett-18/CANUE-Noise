@@ -10,7 +10,7 @@ library(stringr)
 #########################################
 
 inPath = "D:/Work/Noise/aaa_CSV_CONVERTED/Predictors_CSV/2003/VAN/Vector_dat"
-outPath = "D:/Work/Noise/aaa_CSV_CONVERTED/Predictors_CSV/2003/VAN/Merged/van2003_vector.csv"
+outPath = "D:/Work/Noise/aaa_CSV_CONVERTED/Predictors_CSV/2003/VAN/Merged/"
 outName = "van2003_vector.csv"
 
 # Working Directory
