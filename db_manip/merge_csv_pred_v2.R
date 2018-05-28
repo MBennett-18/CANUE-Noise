@@ -2,9 +2,7 @@
 # The code is rerun for each city/year combination to avoi dpotential crossover of variables
 # Final number of variables for each dataset should be 401
 
-
 library(stringr)
-
 #########################################
 # VANCOUVER 2003 Vector_dat
 #########################################
@@ -51,26 +49,36 @@ voi <- c("PCA_ID",
           "SUM_leng_1")
 # Only keep vars that are contained within the voi list
 merged_drop <- merged_data[, grep(paste(voi,collapse="|"),colnames(merged_data))]
-
+# Export full db to csv
 write.csv(merged_drop, file.path(outPath, outName))
-
 
 #########################################
 # HALIFAX 2010 Vector_dat
 #########################################
-
+inPath = "D:/Work/Noise/aaa_CSV_CONVERTED/Predictors_CSV/2010/HRM/Vector_dat"
+outPath = "D:/Work/Noise/aaa_CSV_CONVERTED/Predictors_CSV/2010/HRM/Merged/"
+outName = "hrm2010_vector.csv"
 #########################################
 # MONTREAL 2010 Vector_dat
 #########################################
-
+inPath = "D:/Work/Noise/aaa_CSV_CONVERTED/Predictors_CSV/2010/MTL/Vector_dat"
+outPath = "D:/Work/Noise/aaa_CSV_CONVERTED/Predictors_CSV/2010/MTL/Merged/"
+outName = "mtl2010_vector.csv"
 #########################################
 # MONTREAL 2014 Vector_dat
 #########################################
-
+inPath = "D:/Work/Noise/aaa_CSV_CONVERTED/Predictors_CSV/2014/MTL/Vector_dat"
+outPath = "D:/Work/Noise/aaa_CSV_CONVERTED/Predictors_CSV/2014/MTL/Merged/"
+outName = "mtl2014_vector.csv"
 #########################################
 # TORONTO 2016 Vector_dat
 #########################################
-
+inPath = "D:/Work/Noise/aaa_CSV_CONVERTED/Predictors_CSV/2016/TOR/Vector_dat"
+outPath = "D:/Work/Noise/aaa_CSV_CONVERTED/Predictors_CSV/2016/TOR/Merged/"
+outName = "tor2016_vector.csv"
 #########################################
 # LONGUEUIL 2017 Vector_dat
 #########################################
+inPath = "D:/Work/Noise/aaa_CSV_CONVERTED/Predictors_CSV/2017/LNG/Vector_dat"
+outPath = "D:/Work/Noise/aaa_CSV_CONVERTED/Predictors_CSV/2017/LNG/Merged/"
+outName = "lng2017_vector.csv"
