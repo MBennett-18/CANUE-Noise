@@ -1,15 +1,13 @@
-# This will combine all the predictors that were stored as vector data from the shapefiles. All are combined in on large dataset for city and year
-# The code is rerun for each city/year combination to avoi dpotential crossover of variables
-# Final number of variables for each dataset should be 401
 
 library(stringr)
 #########################################
-# VANCOUVER 2003 Vector_dat
+# VANCOUVER 2003 slope
 #########################################
+rm(list=ls())
 
-inPath = "D:/Work/Noise/aaa_CSV_CONVERTED/Predictors_CSV/2003/VAN/Vector_dat"
+inPath = "D:/Work/Noise/aaa_CSV_CONVERTED/Predictors_CSV/2003/VAN/Raster_dat/slope"
 outPath = "D:/Work/Noise/aaa_CSV_CONVERTED/Predictors_CSV/2003/VAN/Merged/"
-outName = "van2003_vector.csv"
+outName = "van2003_slope.csv"
 
 # Working Directory
 setwd(inPath)
@@ -29,6 +27,7 @@ all_files <- lapply(filenames, function(x) {
   return(file)
 })
 
+
 # Function to join all data in list,
 # Agruments (list of data, join function type, ... = specify by = "colname")
 multi_join <- function(list.data, join_func, ...){
@@ -39,28 +38,22 @@ multi_join <- function(list.data, join_func, ...){
 
 # Run the previuosly defined function to join all within list
 merged_data <- multi_join(all_files, full_join, by = "PCA_ID")
-# List of variables to keep, note distance is kept to ensure proper colname l;abel
-voi <- c("PCA_ID",
-          "POSTALCODE",
-          "distance",
-          "Point_Coun",
-          "SUM_count",
-          "SUM_Length",
-          "SUM_leng_1")
-# Only keep vars that are contained within the voi list
-merged_drop <- merged_data[, grep(paste(voi,collapse="|"),colnames(merged_data))]
-# Export full db to csv
+# This column isn't required
+voi <- c("OID")
+
+merged_drop <- merged_data[, -grep(voi,colnames(merged_data))]
+
 write.csv(merged_drop, file.path(outPath, outName))
 
+
 #########################################
-# HALIFAX 2010 Vector_dat
-# SUM COUNT IS SOMETIMES REPEATED AS A COLUMN, SAME INFO IN BOTH
+# HALIFAX 2010 slope
 #########################################
+
 rm(list=ls())
-inPath = "D:/Work/Noise/aaa_CSV_CONVERTED/Predictors_CSV/2010/HRM/Vector_dat"
+inPath = "D:/Work/Noise/aaa_CSV_CONVERTED/Predictors_CSV/2010/HRM/Raster_dat/slope"
 outPath = "D:/Work/Noise/aaa_CSV_CONVERTED/Predictors_CSV/2010/HRM/Merged/"
-outName = "hrm2010_vector.csv"
-
+outName = "hrm2010_slope.csv"
 
 # Working Directory
 setwd(inPath)
@@ -80,6 +73,7 @@ all_files <- lapply(filenames, function(x) {
   return(file)
 })
 
+
 # Function to join all data in list,
 # Agruments (list of data, join function type, ... = specify by = "colname")
 multi_join <- function(list.data, join_func, ...){
@@ -90,25 +84,20 @@ multi_join <- function(list.data, join_func, ...){
 
 # Run the previuosly defined function to join all within list
 merged_data <- multi_join(all_files, full_join, by = "PCA_ID")
-# List of variables to keep, note distance is kept to ensure proper colname l;abel
-voi <- c("PCA_ID",
-          "POSTALCODE",
-          "distance",
-          "Point_Coun",
-          "SUM_count",
-          "SUM_Length",
-          "SUM_leng_1")
-# Only keep vars that are contained within the voi list
-merged_drop <- merged_data[, grep(paste(voi,collapse="|"),colnames(merged_data))]
-# Export full db to csv
+# This column isn't required
+voi <- c("OID")
+
+merged_drop <- merged_data[, -grep(voi,colnames(merged_data))]
 write.csv(merged_drop, file.path(outPath, outName))
+
 #########################################
-# MONTREAL 2010 Vector_dat
+# MONTREAL 2010 slope
 #########################################
+
 rm(list=ls())
-inPath = "D:/Work/Noise/aaa_CSV_CONVERTED/Predictors_CSV/2010/MTL/Vector_dat"
+inPath = "D:/Work/Noise/aaa_CSV_CONVERTED/Predictors_CSV/2010/MTL/Raster_dat/slope"
 outPath = "D:/Work/Noise/aaa_CSV_CONVERTED/Predictors_CSV/2010/MTL/Merged/"
-outName = "mtl2010_vector.csv"
+outName = "mtl2010_slope.csv"
 
 # Working Directory
 setwd(inPath)
@@ -128,6 +117,7 @@ all_files <- lapply(filenames, function(x) {
   return(file)
 })
 
+
 # Function to join all data in list,
 # Agruments (list of data, join function type, ... = specify by = "colname")
 multi_join <- function(list.data, join_func, ...){
@@ -138,27 +128,20 @@ multi_join <- function(list.data, join_func, ...){
 
 # Run the previuosly defined function to join all within list
 merged_data <- multi_join(all_files, full_join, by = "PCA_ID")
-# List of variables to keep, note distance is kept to ensure proper colname l;abel
-voi <- c("PCA_ID",
-          "POSTALCODE",
-          "distance",
-          "Point_Coun",
-          "SUM_count",
-          "SUM_Length",
-          "SUM_leng_1")
-# Only keep vars that are contained within the voi list
-merged_drop <- merged_data[, grep(paste(voi,collapse="|"),colnames(merged_data))]
-# Export full db to csv
-write.csv(merged_drop, file.path(outPath, outName))
-#########################################
-# MONTREAL 2014 Vector_dat
-#########################################
-rm(list=ls())
+# This column isn't required
+voi <- c("OID")
 
-inPath = "D:/Work/Noise/aaa_CSV_CONVERTED/Predictors_CSV/2014/MTL/Vector_dat"
+merged_drop <- merged_data[, -grep(voi,colnames(merged_data))]
+write.csv(merged_drop, file.path(outPath, outName))
+
+#########################################
+# MONTREAL 2014 slope
+#########################################
+
+rm(list=ls())
+inPath = "D:/Work/Noise/aaa_CSV_CONVERTED/Predictors_CSV/2014/MTL/Raster_dat/slope"
 outPath = "D:/Work/Noise/aaa_CSV_CONVERTED/Predictors_CSV/2014/MTL/Merged/"
-outName = "mtl2014_vector.csv"
-
+outName = "mtl2014_slope.csv"
 
 # Working Directory
 setwd(inPath)
@@ -178,6 +161,7 @@ all_files <- lapply(filenames, function(x) {
   return(file)
 })
 
+
 # Function to join all data in list,
 # Agruments (list of data, join function type, ... = specify by = "colname")
 multi_join <- function(list.data, join_func, ...){
@@ -188,29 +172,20 @@ multi_join <- function(list.data, join_func, ...){
 
 # Run the previuosly defined function to join all within list
 merged_data <- multi_join(all_files, full_join, by = "PCA_ID")
-# List of variables to keep, note distance is kept to ensure proper colname l;abel
-voi <- c("PCA_ID",
-          "POSTALCODE",
-          "distance",
-          "Point_Coun",
-          "SUM_count",
-          "SUM_Length",
-          "SUM_leng_1")
-# Only keep vars that are contained within the voi list
-merged_drop <- merged_data[, grep(paste(voi,collapse="|"),colnames(merged_data))]
-# Export full db to csv
-write.csv(merged_drop, file.path(outPath, outName))
-#########################################
-# TORONTO 2016 Vector_dat
-#HAS transportation files
-#########################################
-rm(list=ls())
+# This column isn't required
+voi <- c("OID")
 
-inPath = "D:/Work/Noise/aaa_CSV_CONVERTED/Predictors_CSV/2016/TOR/Vector_dat"
+merged_drop <- merged_data[, -grep(voi,colnames(merged_data))]
+write.csv(merged_drop, file.path(outPath, outName))
+
+#########################################
+# TORONTO 2016 slope
+#########################################
+
+rm(list=ls())
+inPath = "D:/Work/Noise/aaa_CSV_CONVERTED/Predictors_CSV/2016/TOR/Raster_dat/slope"
 outPath = "D:/Work/Noise/aaa_CSV_CONVERTED/Predictors_CSV/2016/TOR/Merged/"
-outName = "tor2016_vector.csv"
-
-
+outName = "tor2016_slope.csv"
 
 # Working Directory
 setwd(inPath)
@@ -230,6 +205,7 @@ all_files <- lapply(filenames, function(x) {
   return(file)
 })
 
+
 # Function to join all data in list,
 # Agruments (list of data, join function type, ... = specify by = "colname")
 multi_join <- function(list.data, join_func, ...){
@@ -240,28 +216,20 @@ multi_join <- function(list.data, join_func, ...){
 
 # Run the previuosly defined function to join all within list
 merged_data <- multi_join(all_files, full_join, by = "PCA_ID")
-# List of variables to keep, note distance is kept to ensure proper colname l;abel
-voi <- c("PCA_ID",
-          "POSTALCODE",
-          "distance",
-          "Point_Coun",
-          "SUM_count",
-          "SUM_Length",
-          "SUM_leng_1")
-# Only keep vars that are contained within the voi list
-merged_drop <- merged_data[, grep(paste(voi,collapse="|"),colnames(merged_data))]
-# Export full db to csv
-write.csv(merged_drop, file.path(outPath, outName))
-#########################################
-# LONGUEUIL 2017 Vector_dat
-# NO POSTALCODE IN THIS DATA
-#########################################
+# This column isn't required
+voi <- c("OID")
 
+merged_drop <- merged_data[, -grep(voi,colnames(merged_data))]
+write.csv(merged_drop, file.path(outPath, outName))
+
+#########################################
+# LONG 2017 slope
+#########################################
 
 rm(list=ls())
-inPath = "D:/Work/Noise/aaa_CSV_CONVERTED/Predictors_CSV/2017/LNG/Vector_dat"
+inPath = "D:/Work/Noise/aaa_CSV_CONVERTED/Predictors_CSV/2017/LNG/Raster_dat/slope"
 outPath = "D:/Work/Noise/aaa_CSV_CONVERTED/Predictors_CSV/2017/LNG/Merged/"
-outName = "lng2017_vector.csv"
+outName = "lng2017_slope.csv"
 
 
 # Working Directory
@@ -282,6 +250,7 @@ all_files <- lapply(filenames, function(x) {
   return(file)
 })
 
+
 # Function to join all data in list,
 # Agruments (list of data, join function type, ... = specify by = "colname")
 multi_join <- function(list.data, join_func, ...){
@@ -292,25 +261,8 @@ multi_join <- function(list.data, join_func, ...){
 
 # Run the previuosly defined function to join all within list
 merged_data <- multi_join(all_files, full_join, by = "PCA_ID")
-# List of variables to keep, note distance is kept to ensure proper colname l;abel
-voi <- c("PCA_ID",
-          "POSTALCODE",
-          "distance",
-          "Point_Coun",
-          "SUM_count",
-          "SUM_Length",
-          "SUM_leng_1")
-# Only keep vars that are contained within the voi list
-merged_drop <- merged_data[, grep(paste(voi,collapse="|"),colnames(merged_data))]
-# Export full db to csv
+# This column isn't required
+voi <- c("OID")
+
+merged_drop <- merged_data[, -grep(voi,colnames(merged_data))]
 write.csv(merged_drop, file.path(outPath, outName))
-
-rm(list=ls())
-
-
-van <- read.csv("D:/Work/Noise/aaa_CSV_CONVERTED/Predictors_CSV/2003/VAN/Merged/van2003_vector.csv")
-hrm <- read.csv("D:/Work/Noise/aaa_CSV_CONVERTED/Predictors_CSV/2010/HRM/Merged/hrm2010_vector.csv")
-mtl10 <- read.csv("D:/Work/Noise/aaa_CSV_CONVERTED/Predictors_CSV/2010/MTL/Merged/mtl2010_vector.csv")
-mtl14 <- read.csv("D:/Work/Noise/aaa_CSV_CONVERTED/Predictors_CSV/2014/MTL/Merged/mtl2014_vector.csv")
-tor <- read.csv("D:/Work/Noise/aaa_CSV_CONVERTED/Predictors_CSV/2016/TOR/Merged/tor2016_vector.csv")
-lng <- read.csv("D:/Work/Noise/aaa_CSV_CONVERTED/Predictors_CSV/2017/LNG/Merged/lng2017_vector.csv")
