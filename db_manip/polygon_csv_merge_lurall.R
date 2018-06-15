@@ -1284,13 +1284,13 @@ voi <- c("PCA_ID",
           "distance",
           "Shape_Area",
           "SUM_area",
-          "Commercial",
-          "Government and Institutional",
-          "Open Area",
-          "Parks and Recreational",
-          "Residential",
-          "Resource and Industrial",
-          "Waterbody")
+          "COMMERCIAL",
+          "GOVERNMENT AND INSTITUTIONAL",
+          "OPEN AREA",
+          "PARKS AND RECREATIONAL",
+          "RESIDENTIAL",
+          "RESOURCE AND INDUSTRIAL",
+          "WATERBODY")
 # Only keep vars that are contained within the voi list
 full_50 <- full_50[, grep(paste(voi,collapse="|"),colnames(full_50))]
 colnames(full_50)[2:12] <- paste(colnames(full_50)[2:12], "050", sep='_')
@@ -1312,14 +1312,14 @@ voi <- c("PCA_ID",
           "distance",
           "Shape_Area",
           "SUM_area",
-          "Commercial",
-          "Government and Institutional",
-          "Open Area",
-          "Parks and Recreational",
-          "Residential",
-          "Resource and Industrial",
-          "Waterbody")
-# Only keep vars that are contained within the voi list
+          "COMMERCIAL",
+          "GOVERNMENT AND INSTITUTIONAL",
+          "OPEN AREA",
+          "PARKS AND RECREATIONAL",
+          "RESIDENTIAL",
+          "RESOURCE AND INDUSTRIAL",
+          "WATERBODY")
+# ONLY KEEP VARS THAT ARE contained within the voi list
 full_100 <- full_100[, grep(paste(voi,collapse="|"),colnames(full_100))]
 colnames(full_100)[2:12] <- paste(colnames(full_100)[2:12], "100", sep='_')
 rm(df1,df2,cast_df2)
@@ -1340,13 +1340,13 @@ voi <- c("PCA_ID",
           "distance",
           "Shape_Area",
           "SUM_area",
-          "Commercial",
-          "Government and Institutional",
-          "Open Area",
-          "Parks and Recreational",
-          "Residential",
-          "Resource and Industrial",
-          "Waterbody")
+          "COMMERCIAL",
+          "GOVERNMENT AND INSTITUTIONAL",
+          "OPEN AREA",
+          "PARKS AND RECREATIONAL",
+          "RESIDENTIAL",
+          "RESOURCE AND INDUSTRIAL",
+          "WATERBODY")
 # Only keep vars that are contained within the voi list
 full_150 <- full_150[, grep(paste(voi,collapse="|"),colnames(full_150))]
 colnames(full_150)[2:12] <- paste(colnames(full_150)[2:12], "150", sep='_')
@@ -1369,13 +1369,13 @@ voi <- c("PCA_ID",
           "distance",
           "Shape_Area",
           "SUM_area",
-          "Commercial",
-          "Government and Institutional",
-          "Open Area",
-          "Parks and Recreational",
-          "Residential",
-          "Resource and Industrial",
-          "Waterbody")
+          "COMMERCIAL",
+          "GOVERNMENT AND INSTITUTIONAL",
+          "OPEN AREA",
+          "PARKS AND RECREATIONAL",
+          "RESIDENTIAL",
+          "RESOURCE AND INDUSTRIAL",
+          "WATERBODY")
 # Only keep vars that are contained within the voi list
 full_200 <- full_200[, grep(paste(voi,collapse="|"),colnames(full_200))]
 colnames(full_200)[2:12] <- paste(colnames(full_200)[2:12], "200", sep='_')
@@ -1398,13 +1398,13 @@ voi <- c("PCA_ID",
           "distance",
           "Shape_Area",
           "SUM_area",
-          "Commercial",
-          "Government and Institutional",
-          "Open Area",
-          "Parks and Recreational",
-          "Residential",
-          "Resource and Industrial",
-          "Waterbody")
+          "COMMERCIAL",
+          "GOVERNMENT AND INSTITUTIONAL",
+          "OPEN AREA",
+          "PARKS AND RECREATIONAL",
+          "RESIDENTIAL",
+          "RESOURCE AND INDUSTRIAL",
+          "WATERBODY")
 # Only keep vars that are contained within the voi list
 full_250 <- full_250[, grep(paste(voi,collapse="|"),colnames(full_250))]
 colnames(full_250)[2:12] <- paste(colnames(full_250)[2:12], "250", sep='_')
@@ -1426,13 +1426,13 @@ voi <- c("PCA_ID",
           "distance",
           "Shape_Area",
           "SUM_area",
-          "Commercial",
-          "Government and Institutional",
-          "Open Area",
-          "Parks and Recreational",
-          "Residential",
-          "Resource and Industrial",
-          "Waterbody")
+          "COMMERCIAL",
+          "GOVERNMENT AND INSTITUTIONAL",
+          "OPEN AREA",
+          "PARKS AND RECREATIONAL",
+          "RESIDENTIAL",
+          "RESOURCE AND INDUSTRIAL",
+          "WATERBODY")
 # Only keep vars that are contained within the voi list
 full_300 <- full_300[, grep(paste(voi,collapse="|"),colnames(full_300))]
 colnames(full_300)[2:12] <- paste(colnames(full_300)[2:12], "300", sep='_')
@@ -1454,13 +1454,13 @@ voi <- c("PCA_ID",
           "distance",
           "Shape_Area",
           "SUM_area",
-          "Commercial",
-          "Government and Institutional",
-          "Open Area",
-          "Parks and Recreational",
-          "Residential",
-          "Resource and Industrial",
-          "Waterbody")
+          "COMMERCIAL",
+          "GOVERNMENT AND INSTITUTIONAL",
+          "OPEN AREA",
+          "PARKS AND RECREATIONAL",
+          "RESIDENTIAL",
+          "RESOURCE AND INDUSTRIAL",
+          "WATERBODY")
 # Only keep vars that are contained within the voi list
 full_400 <- full_400[, grep(paste(voi,collapse="|"),colnames(full_400))]
 colnames(full_400)[2:12] <- paste(colnames(full_400)[2:12], "400", sep='_')
@@ -1482,13 +1482,13 @@ voi <- c("PCA_ID",
           "distance",
           "Shape_Area",
           "SUM_area",
-          "Commercial",
-          "Government and Institutional",
-          "Open Area",
-          "Parks and Recreational",
-          "Residential",
-          "Resource and Industrial",
-          "Waterbody")
+          "COMMERCIAL",
+          "GOVERNMENT AND INSTITUTIONAL",
+          "OPEN AREA",
+          "PARKS AND RECREATIONAL",
+          "RESIDENTIAL",
+          "RESOURCE AND INDUSTRIAL",
+          "WATERBODY")
 # Only keep vars that are contained within the voi list
 full_500 <- full_500[, grep(paste(voi,collapse="|"),colnames(full_500))]
 colnames(full_500)[2:12] <- paste(colnames(full_500)[2:12], "500", sep='_')
@@ -1510,13 +1510,13 @@ voi <- c("PCA_ID",
           "distance",
           "Shape_Area",
           "SUM_area",
-          "Commercial",
-          "Government and Institutional",
-          "Open Area",
-          "Parks and Recreational",
-          "Residential",
-          "Resource and Industrial",
-          "Waterbody")
+          "COMMERCIAL",
+          "GOVERNMENT AND INSTITUTIONAL",
+          "OPEN AREA",
+          "PARKS AND RECREATIONAL",
+          "RESIDENTIAL",
+          "RESOURCE AND INDUSTRIAL",
+          "WATERBODY")
 # Only keep vars that are contained within the voi list
 full_750 <- full_750[, grep(paste(voi,collapse="|"),colnames(full_750))]
 colnames(full_750)[2:12] <- paste(colnames(full_750)[2:12], "750", sep='_')
@@ -1538,13 +1538,13 @@ voi <- c("PCA_ID",
           "distance",
           "Shape_Area",
           "SUM_area",
-          "Commercial",
-          "Government and Institutional",
-          "Open Area",
-          "Parks and Recreational",
-          "Residential",
-          "Resource and Industrial",
-          "Waterbody")
+          "COMMERCIAL",
+          "GOVERNMENT AND INSTITUTIONAL",
+          "OPEN AREA",
+          "PARKS AND RECREATIONAL",
+          "RESIDENTIAL",
+          "RESOURCE AND INDUSTRIAL",
+          "WATERBODY")
 # Only keep vars that are contained within the voi list
 full_1000 <- full_1000[, grep(paste(voi,collapse="|"),colnames(full_1000))]
 colnames(full_1000)[2:12] <- paste(colnames(full_1000)[2:12], "1000", sep='_')
@@ -1591,22 +1591,23 @@ df2 <- read_xls(list[2])
 # Reshape the table file to a one-to-one relationship
 cast_df2 <-dcast(df2, Join_ID ~ feat, value.var="PercentArea")
 full_50 <- full_join(df1,cast_df2, by=c("Join_ID"),suffixes=c("_df1","_df2") )
+full_50$WATERBODY_050 <- NA #blank column
 full_50[is.na(full_50)] <- 0
 voi <- c("PCA_ID",
           "POSTALCODE",
           "distance",
           "Shape_Area",
           "SUM_area",
-          "Commercial",
-          "Government and Institutional",
-          "Open Area",
-          "Parks and Recreational",
-          "Residential",
-          "Resource and Industrial",
-          "Waterbody")
+          "COMMERCIAL",
+          "GOVERNMENT AND INSTITUTIONAL",
+          "OPEN AREA",
+          "PARKS AND RECREATIONAL",
+          "RESIDENTIAL",
+          "RESOURCE AND INDUSTRIAL",
+          "WATERBODY")
 # Only keep vars that are contained within the voi list
 full_50 <- full_50[, grep(paste(voi,collapse="|"),colnames(full_50))]
-colnames(full_50)[2:12] <- paste(colnames(full_50)[2:12], "050", sep='_')
+colnames(full_50)[2:10] <- paste(colnames(full_50)[2:10], "050", sep='_')
 rm(df1,df2,cast_df2)
 
 ################################################
@@ -1619,22 +1620,23 @@ df2 <- read_xls(list[2])
 # Reshape the table file to a one-to-one relationship
 cast_df2 <-dcast(df2, Join_ID ~ feat, value.var="PercentArea")
 full_100 <- full_join(df1,cast_df2, by=c("Join_ID"),suffixes=c("_df1","_df2") )
+full_100$WATERBODY_100 <- NA #blank column
 full_100[is.na(full_100)] <- 0
 voi <- c("PCA_ID",
           "POSTALCODE",
           "distance",
           "Shape_Area",
           "SUM_area",
-          "Commercial",
-          "Government and Institutional",
-          "Open Area",
-          "Parks and Recreational",
-          "Residential",
-          "Resource and Industrial",
-          "Waterbody")
+          "COMMERCIAL",
+          "GOVERNMENT AND INSTITUTIONAL",
+          "OPEN AREA",
+          "PARKS AND RECREATIONAL",
+          "RESIDENTIAL",
+          "RESOURCE AND INDUSTRIAL",
+          "WATERBODY")
 # Only keep vars that are contained within the voi list
 full_100 <- full_100[, grep(paste(voi,collapse="|"),colnames(full_100))]
-colnames(full_100)[2:12] <- paste(colnames(full_100)[2:12], "100", sep='_')
+colnames(full_100)[2:10] <- paste(colnames(full_100)[2:10], "100", sep='_')
 rm(df1,df2,cast_df2)
 
 ################################################
@@ -1647,22 +1649,23 @@ df2 <- read_xls(list[2])
 # Reshape the table file to a one-to-one relationship
 cast_df2 <-dcast(df2, Join_ID ~ feat, value.var="PercentArea")
 full_150 <- full_join(df1,cast_df2, by=c("Join_ID"),suffixes=c("_df1","_df2") )
+full_150$WATERBODY_150 <- NA #blank column
 full_150[is.na(full_150)] <- 0
 voi <- c("PCA_ID",
           "POSTALCODE",
           "distance",
           "Shape_Area",
           "SUM_area",
-          "Commercial",
-          "Government and Institutional",
-          "Open Area",
-          "Parks and Recreational",
-          "Residential",
-          "Resource and Industrial",
-          "Waterbody")
+          "COMMERCIAL",
+          "GOVERNMENT AND INSTITUTIONAL",
+          "OPEN AREA",
+          "PARKS AND RECREATIONAL",
+          "RESIDENTIAL",
+          "RESOURCE AND INDUSTRIAL",
+          "WATERBODY")
 # Only keep vars that are contained within the voi list
 full_150 <- full_150[, grep(paste(voi,collapse="|"),colnames(full_150))]
-colnames(full_150)[2:12] <- paste(colnames(full_150)[2:12], "150", sep='_')
+colnames(full_150)[2:10] <- paste(colnames(full_150)[2:10], "150", sep='_')
 rm(df1,df2,cast_df2)
 
 ################################################
@@ -1682,16 +1685,16 @@ voi <- c("PCA_ID",
           "distance",
           "Shape_Area",
           "SUM_area",
-          "Commercial",
-          "Government and Institutional",
-          "Open Area",
-          "Parks and Recreational",
-          "Residential",
-          "Resource and Industrial",
-          "Waterbody")
+          "COMMERCIAL",
+          "GOVERNMENT AND INSTITUTIONAL",
+          "OPEN AREA",
+          "PARKS AND RECREATIONAL",
+          "RESIDENTIAL",
+          "RESOURCE AND INDUSTRIAL",
+          "WATERBODY")
 # Only keep vars that are contained within the voi list
 full_200 <- full_200[, grep(paste(voi,collapse="|"),colnames(full_200))]
-colnames(full_200)[2:12] <- paste(colnames(full_200)[2:12], "200", sep='_')
+colnames(full_200)[2:11] <- paste(colnames(full_200)[2:11], "200", sep='_')
 rm(df1,df2,cast_df2)
 
 ################################################
@@ -1711,16 +1714,16 @@ voi <- c("PCA_ID",
           "distance",
           "Shape_Area",
           "SUM_area",
-          "Commercial",
-          "Government and Institutional",
-          "Open Area",
-          "Parks and Recreational",
-          "Residential",
-          "Resource and Industrial",
-          "Waterbody")
+          "COMMERCIAL",
+          "GOVERNMENT AND INSTITUTIONAL",
+          "OPEN AREA",
+          "PARKS AND RECREATIONAL",
+          "RESIDENTIAL",
+          "RESOURCE AND INDUSTRIAL",
+          "WATERBODY")
 # Only keep vars that are contained within the voi list
 full_250 <- full_250[, grep(paste(voi,collapse="|"),colnames(full_250))]
-colnames(full_250)[2:12] <- paste(colnames(full_250)[2:12], "250", sep='_')
+colnames(full_250)[2:11] <- paste(colnames(full_250)[2:11], "250", sep='_')
 rm(df1,df2,cast_df2)
 ################################################
 ############ 300 METER BUFFER DISTANCE ############
@@ -1739,16 +1742,16 @@ voi <- c("PCA_ID",
           "distance",
           "Shape_Area",
           "SUM_area",
-          "Commercial",
-          "Government and Institutional",
-          "Open Area",
-          "Parks and Recreational",
-          "Residential",
-          "Resource and Industrial",
-          "Waterbody")
+          "COMMERCIAL",
+          "GOVERNMENT AND INSTITUTIONAL",
+          "OPEN AREA",
+          "PARKS AND RECREATIONAL",
+          "RESIDENTIAL",
+          "RESOURCE AND INDUSTRIAL",
+          "WATERBODY")
 # Only keep vars that are contained within the voi list
 full_300 <- full_300[, grep(paste(voi,collapse="|"),colnames(full_300))]
-colnames(full_300)[2:12] <- paste(colnames(full_300)[2:12], "300", sep='_')
+colnames(full_300)[2:11] <- paste(colnames(full_300)[2:11], "300", sep='_')
 rm(df1,df2,cast_df2)
 ################################################
 ############ 400 METER BUFFER DISTANCE ############
@@ -1767,16 +1770,16 @@ voi <- c("PCA_ID",
           "distance",
           "Shape_Area",
           "SUM_area",
-          "Commercial",
-          "Government and Institutional",
-          "Open Area",
-          "Parks and Recreational",
-          "Residential",
-          "Resource and Industrial",
-          "Waterbody")
+          "COMMERCIAL",
+          "GOVERNMENT AND INSTITUTIONAL",
+          "OPEN AREA",
+          "PARKS AND RECREATIONAL",
+          "RESIDENTIAL",
+          "RESOURCE AND INDUSTRIAL",
+          "WATERBODY")
 # Only keep vars that are contained within the voi list
 full_400 <- full_400[, grep(paste(voi,collapse="|"),colnames(full_400))]
-colnames(full_400)[2:12] <- paste(colnames(full_400)[2:12], "400", sep='_')
+colnames(full_400)[2:11] <- paste(colnames(full_400)[2:11], "400", sep='_')
 rm(df1,df2,cast_df2)
 ################################################
 ############ 500 METER BUFFER DISTANCE ############
@@ -1795,16 +1798,16 @@ voi <- c("PCA_ID",
           "distance",
           "Shape_Area",
           "SUM_area",
-          "Commercial",
-          "Government and Institutional",
-          "Open Area",
-          "Parks and Recreational",
-          "Residential",
-          "Resource and Industrial",
-          "Waterbody")
+          "COMMERCIAL",
+          "GOVERNMENT AND INSTITUTIONAL",
+          "OPEN AREA",
+          "PARKS AND RECREATIONAL",
+          "RESIDENTIAL",
+          "RESOURCE AND INDUSTRIAL",
+          "WATERBODY")
 # Only keep vars that are contained within the voi list
 full_500 <- full_500[, grep(paste(voi,collapse="|"),colnames(full_500))]
-colnames(full_500)[2:12] <- paste(colnames(full_500)[2:12], "500", sep='_')
+colnames(full_500)[2:11] <- paste(colnames(full_500)[2:11], "500", sep='_')
 rm(df1,df2,cast_df2)
 ################################################
 ############ 750 METER BUFFER DISTANCE ############
@@ -1823,16 +1826,16 @@ voi <- c("PCA_ID",
           "distance",
           "Shape_Area",
           "SUM_area",
-          "Commercial",
-          "Government and Institutional",
-          "Open Area",
-          "Parks and Recreational",
-          "Residential",
-          "Resource and Industrial",
-          "Waterbody")
+          "COMMERCIAL",
+          "GOVERNMENT AND INSTITUTIONAL",
+          "OPEN AREA",
+          "PARKS AND RECREATIONAL",
+          "RESIDENTIAL",
+          "RESOURCE AND INDUSTRIAL",
+          "WATERBODY")
 # Only keep vars that are contained within the voi list
 full_750 <- full_750[, grep(paste(voi,collapse="|"),colnames(full_750))]
-colnames(full_750)[2:12] <- paste(colnames(full_750)[2:12], "750", sep='_')
+colnames(full_750)[2:11] <- paste(colnames(full_750)[2:11], "750", sep='_')
 rm(df1,df2,cast_df2)
 ################################################
 ############ 1000 METER BUFFER DISTANCE ############
@@ -1851,16 +1854,16 @@ voi <- c("PCA_ID",
           "distance",
           "Shape_Area",
           "SUM_area",
-          "Commercial",
-          "Government and Institutional",
-          "Open Area",
-          "Parks and Recreational",
-          "Residential",
-          "Resource and Industrial",
-          "Waterbody")
+          "COMMERCIAL",
+          "GOVERNMENT AND INSTITUTIONAL",
+          "OPEN AREA",
+          "PARKS AND RECREATIONAL",
+          "RESIDENTIAL",
+          "RESOURCE AND INDUSTRIAL",
+          "WATERBODY")
 # Only keep vars that are contained within the voi list
 full_1000 <- full_1000[, grep(paste(voi,collapse="|"),colnames(full_1000))]
-colnames(full_1000)[2:12] <- paste(colnames(full_1000)[2:12], "1000", sep='_')
+colnames(full_1000)[2:11] <- paste(colnames(full_1000)[2:11], "1000", sep='_')
 rm(df1,df2,cast_df2,voi,list,inPath)
 
 # all df into list
