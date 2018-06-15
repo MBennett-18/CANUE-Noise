@@ -202,6 +202,7 @@ merged_drop <- merged_data[, grep(paste(voi,collapse="|"),colnames(merged_data))
 write.csv(merged_drop, file.path(outPath, outName))
 #########################################
 # TORONTO 2016 Vector_dat
+#HAS transportation files
 #########################################
 rm(list=ls())
 
@@ -304,13 +305,12 @@ merged_drop <- merged_data[, grep(paste(voi,collapse="|"),colnames(merged_data))
 # Export full db to csv
 write.csv(merged_drop, file.path(outPath, outName))
 
+rm(list=ls())
+
+
 van <- read.csv("D:/Work/Noise/aaa_CSV_CONVERTED/Predictors_CSV/2003/VAN/Merged/van2003_vector.csv")
 hrm <- read.csv("D:/Work/Noise/aaa_CSV_CONVERTED/Predictors_CSV/2010/HRM/Merged/hrm2010_vector.csv")
 mtl10 <- read.csv("D:/Work/Noise/aaa_CSV_CONVERTED/Predictors_CSV/2010/MTL/Merged/mtl2010_vector.csv")
 mtl14 <- read.csv("D:/Work/Noise/aaa_CSV_CONVERTED/Predictors_CSV/2014/MTL/Merged/mtl2014_vector.csv")
 tor <- read.csv("D:/Work/Noise/aaa_CSV_CONVERTED/Predictors_CSV/2016/TOR/Merged/tor2016_vector.csv")
 lng <- read.csv("D:/Work/Noise/aaa_CSV_CONVERTED/Predictors_CSV/2017/LNG/Merged/lng2017_vector.csv")
-
-
-match <- as.data.frame(lapply(intersect(colnames(van), colnames(hrm),colnames(mtl10),colnames(mtl14),colnames(tor),colnames(lng)),
-              function(name) van[name] + hrm[name] + mtl10[name] + mtl14[name] + tor[name] + lng[name]))

@@ -23,11 +23,11 @@ import os
 ############
 
 
-inPath = "D:/Work/Noise/Pred_Output_arc/2017/LNG/"
+inPath = "D:/Work/Noise/Pred_Output_arc/2010/MTL/"
 arcpy.env.workspace = inPath
-outPath = "D:/Work/Noise/aaa_CSV_CONVERTED/Predictors_CSV/2017/LNG/Vector_dat/Roads_only"
+outPath = "D:/Work/Noise/aaa_CSV_CONVERTED/Predictors_CSV/2010/MTL/Vector_dat/Airports"
 # wildcard operator to find each file, devidfed by predictor type (see above list)
-type = "LN_RoadsLine_only*"
+type = "QCaer*"
 
 # RECURSIVE to look through every distance, because of previous file structure
 fcList = []
