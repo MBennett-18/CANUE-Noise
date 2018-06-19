@@ -20,14 +20,17 @@ import os
 # Trans (trs)
 # roads_only (rte_only)
 # Mjr_only (hrd_only)
+########################
+# GTFS Routes
+# GTFS Stops
 ############
 
 
-inPath = "D:/Work/Noise/Pred_Output_arc/2010/MTL/"
+inPath = "D:/Work/Noise/Pred_Output_arc/2010/HRM/"
 arcpy.env.workspace = inPath
-outPath = "D:/Work/Noise/aaa_CSV_CONVERTED/Predictors_CSV/2010/MTL/Vector_dat/Airports"
+outPath = "D:/Work/Noise/aaa_CSV_CONVERTED/Predictors_CSV/2010/HRM/GTFS_dat/Stops"
 # wildcard operator to find each file, devidfed by predictor type (see above list)
-type = "QCaer*"
+type = "NSStops*"
 
 # RECURSIVE to look through every distance, because of previous file structure
 fcList = []
