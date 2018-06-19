@@ -26,11 +26,11 @@ import os
 ############
 
 
-inPath = "D:/Work/Noise/Pred_Output_arc/2010/HRM/"
+inPath = "D:/Work/Noise/Pred_Output_arc/2017/LNG/"
 arcpy.env.workspace = inPath
-outPath = "D:/Work/Noise/aaa_CSV_CONVERTED/Predictors_CSV/2010/HRM/GTFS_dat/Stops"
+outPath = "D:/Work/Noise/aaa_CSV_CONVERTED/Predictors_CSV/2017/LNG/GTFS_dat/Stops"
 # wildcard operator to find each file, devidfed by predictor type (see above list)
-type = "NSStops*"
+type = "LNStops*"
 
 # RECURSIVE to look through every distance, because of previous file structure
 fcList = []
