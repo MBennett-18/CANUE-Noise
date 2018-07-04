@@ -325,3 +325,11 @@ voi <- c("OID")
 
 merged_drop <- merged_data[, -grep(voi,colnames(merged_data))]
 write.csv(merged_drop, file.path(outPath, outName))
+
+van <- read.csv("D:/Work/Noise/aaa_CSV_CONVERTED/Predictors_CSV/2003/VAN/Merged/van2003_NDVI.csv")
+hrm10 <- read.csv("D:/Work/Noise/aaa_CSV_CONVERTED/Predictors_CSV/2010/HRM/Merged/hrm2010_NDVI10.csv")
+hrm11 <- read.csv("D:/Work/Noise/aaa_CSV_CONVERTED/Predictors_CSV/2010/HRM/Merged/hrm2010_NDVI11.csv")
+mtl10 <- read.csv("D:/Work/Noise/aaa_CSV_CONVERTED/Predictors_CSV/2010/MTL/Merged/mtl2010_NDVI.csv")
+mtl14 <- read.csv("D:/Work/Noise/aaa_CSV_CONVERTED/Predictors_CSV/2014/MTL/Merged/mtl2014_NDVI.csv")
+tor <- read.csv("D:/Work/Noise/aaa_CSV_CONVERTED/Predictors_CSV/2016/TOR/Merged/tor2016_NDVI.csv")
+lng <- read.csv("D:/Work/Noise/aaa_CSV_CONVERTED/Predictors_CSV/2017/LNG/Merged/lng2017_NDVI.csv")

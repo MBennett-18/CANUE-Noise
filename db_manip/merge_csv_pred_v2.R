@@ -350,7 +350,7 @@ lng <- read.csv("D:/Work/Noise/aaa_CSV_CONVERTED/Predictors_CSV/2017/LNG/Merged/
 ##################################################################################
 
 
-
+library(stringr)
 #########################################
 # VANCOUVER 2003 GTFS ROUTES/STOPS
 #########################################
