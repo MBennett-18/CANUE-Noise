@@ -13,11 +13,11 @@ import os
 ############
 
 
-inPath = "D:/Work/Noise/Pred_Output_arc/2010/MTL/"
+inPath = "D:/Work/Noise/Pred_Output_arc/2017/LNG/"
 arcpy.env.workspace = inPath
-outPath = "D:/Work/Noise/aaa_CSV_CONVERTED/Predictors_CSV/2010/MTL/GTFS_dat/Stops/"
+outPath = "D:/Work/Noise/aaa_CSV_CONVERTED/Predictors_CSV/2017/LNG/Traffic_Flow/"
 # wildcard operator to find each file, devidfed by predictor type (see above list)
-type = "QCStops*"
+type = "LN_flow*"
 
 # This is set up to be recursive, but not used as such. Borrowed from another code snippet
 fcList = []
